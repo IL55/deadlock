@@ -57,7 +57,21 @@ https://il55.github.io/deadlock/test.html
 Sorry. Tab is locked. There is no unlock button:-)
 But you can close tab.
 
-## Can we run normal version without lock
+## Run normal version without lock
+try to see it without lock, open Chrome console and see results
+https://il55.github.io/deadlock/withoutlock/test.html
+
+## But does it real deadlock
+Where threads are locked? Maybe we observe just old good webworkers and nothing really locked here?
+Yes and no. As described here:
+https://developers.google.com/web/updates/2018/10/wasm-threads#threads_what_about_workers
+"Web Workers do not share mutable data between them"
+But "WebAssembly threads, on the other hand, are threads that can share the same Wasm memory."
+...
+"This means that the applications that use Wasm threads are responsible for managing access to the shared memory as in any traditional threaded application."
+
+So if we responsible for that, let's deadlock it, as normal app do. https://allstarnix.blogspot.com/2012/07/real-life-deadlock.html
+:-)
 
 
 ## Build from source and try locally
