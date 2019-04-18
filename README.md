@@ -47,11 +47,18 @@ T1: Trying to get resource2
 
 To see threads and deadlock you have to set "experimental WebAssembly threads" in `chrome://flags`
 https://developers.google.com/web/updates/images/2018/10/WasmThreads3.png
-Restart chrome is required.
+Chrome restart is required.
 
-Open Chrome Dev-tools F11 and select Console to see debug output
+Open Chrome Dev-tools1 and select Console to see debug output
 Open test page here:
 https://il55.github.io/deadlock/test.html
+
+## I don't want to see that evil deadlock in my browser
+Sorry. Tab is locked. There is no unlock button:-)
+But you can close tab.
+
+## Can we run normal version without lock
+
 
 ## Build from source and try locally
 
